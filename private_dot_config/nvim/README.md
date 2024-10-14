@@ -1,0 +1,22 @@
+# Neovim Configurations
+
+- Package Manager :
+    - lazy : https://lazy.folke.io/
+- Plugins :
+    - (Fuzzy Finder) Telescope : https://github.com/nvim-telescope/telescope.nvim
+    - (Language highlighting) Treesitter : https://github.com/nvim-treesitter/nvim-treesitter
+    - (LSP) :
+        - nvim-lspconfig : https://github.com/neovim/nvim-lspconfig
+        - mason : https://github.com/williamboman/mason.nvim
+        - mason-lspconfig : https://github.com/williamboman/mason-lspconfig.nvim
+        - Completion :
+            - nvim-cmp : https://github.com/hrsh7th/nvim-cmp
+            - cmp-nvim-lsp : https://github.com/hrsh7th/cmp-nvim-lsp
+            - cmp-buffer : https://github.com/hrsh7th/cmp-buffer
+            - cmp-cmdline : https://github.com/hrsh7th/cmp-cmdline
+            - cmp-path : https://github.com/hrsh7th/cmp-path
+        - vim-matchup : https://github.com/andymass/vim-matchup
+    - (OrgMode) :
+        - orgmode : https://github.com/nvim-orgmode/orgmode
+        - org-bullets : https://github.com/nvim-orgmode/org-bullets.nvim
+        - telescope-orgmode.nvim : https://github.com/nvim-orgmode/telescope-orgmode.nvim
