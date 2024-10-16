@@ -3,16 +3,6 @@ return {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.8',
 		dependencies = { 'nvim-lua/plenary.nvim' },
-		config = function()
-			require("telescope").setup()
-
-			local builtin = require('telescope.builtin')
-			vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope find files' })
-			vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Telescope find Git files' })
-			vim.keymap.set('n', '<leader>ps', function()
-				builtin.grep_string({ search = vim.fn.input("Grep > ") })
-			end, { desc = 'Grep pattern' })
-		end
 	},
 	{
 		'nvim-orgmode/telescope-orgmode.nvim',
@@ -21,12 +11,9 @@ return {
 			'nvim-orgmode/orgmode',
 			'nvim-telescope/telescope.nvim',
 		},
-		config = function()
-			require("telescope").load_extension("orgmode")
-
-			vim.keymap.set("n", "<leader>r", require("telescope").extensions.orgmode.refile_heading)
-			vim.keymap.set("n", "<leader>fh", require("telescope").extensions.orgmode.search_headings)
-			vim.keymap.set("n", "<leader>li", require("telescope").extensions.orgmode.insert_link)
-		end
+	},
+	{
+		'nvim-telescope/telescope-fzf-native.nvim',
+		build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
 	}
 }

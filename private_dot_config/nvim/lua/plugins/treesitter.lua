@@ -1,8 +1,8 @@
 return {
 	'nvim-treesitter/nvim-treesitter',
 	build = ":TSUpdate",
-	config = function() 
-		require("nvim-treesitter").setup({
+	config = function()
+		require("nvim-treesitter").setup{
 			ensure_installed = {
 				"vim",
 				"vimdoc",
@@ -34,6 +34,6 @@ return {
 			matchup = {
 				enable = true
 			}
-		})
+		}
 	end
 }

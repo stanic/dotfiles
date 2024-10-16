@@ -4,9 +4,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Theme
-vim.g.airline_theme = "base16"
-
 -- Line numbers
 vim.opt.relativenumber = true
 vim.opt.number = true
@@ -18,3 +15,7 @@ vim.opt.colorcolumn = '80'
 -- Load configs
 require("config.lazy")
 require("nsa")
+
+require('telescope').load_extension('fzf')
+
+vim.opt.filetype.plugin = true
